@@ -1,0 +1,213 @@
+﻿<Window x:Class="Biglietteria.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Biglietteria"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="760" Width="500">
+    <Grid Background="MistyRose">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Border BorderBrush="DarkRed" BorderThickness="2" CornerRadius="7" Height="46" Width="340">
+                <Label Content="Prenota qui il tuo biglietto" FontSize="25" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS"/>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,100,0">
+            <Label Content="Nome:" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="brown" Height="35" Width="65"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0">
+            <TextBox x:Name="txt_nome" Width="130" Height="30"></TextBox>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,70,0">
+            <Label Content="Cognome:" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="brown" Height="35" Width="95"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0">
+            <TextBox x:Name="txt_cognome" Width="130" Height="30"></TextBox>
+        </StackPanel>
+
+
+
+
+        <StackPanel Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,80,0">
+            <Label Content="Cellulare:" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="brown" Height="35" Width="85"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0">
+            <TextBox x:Name="txt_cellulare" Width="130" Height="30"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,0,50,0">
+            <RadioButton x:Name="rbtn_maschio" Height="16" ></RadioButton>
+            <Label Content="M" FontSize="18" FontWeight="Bold"  Foreground="brown" ></Label>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal" Margin="60,0,0,0">
+            <RadioButton x:Name="rbtn_femmina" Height="16" ></RadioButton>
+            <Label Content="F" FontSize="18" FontWeight="Bold"  Foreground="brown" ></Label>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btn_aggiungiCliente"  Content="Aggiungi Cliente" Width="160" Height="33" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" Click="btn_aggiungiCliente_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0">
+            <Label Content="Seleziona il cliente:" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="brown" Height="35" Width="220"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0">
+            <ComboBox x:Name="cmb_cliente" Width="130" Height="30"></ComboBox>
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="7" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <DatePicker x:Name="dtp_data"></DatePicker>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,90,0">
+            <Label Content="Orario:" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="brown" Height="35" Width="70"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0">
+            <ComboBox x:Name="cmb_orario" Width="130" Height="30"></ComboBox>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0">
+            <Button x:Name="btn_add"  Content="Aggiungi" Width="120" Height="33" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0">
+            <Button x:Name="btn_delete"  Content="Cancella" Width="120" Height="33" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="10" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox x:Name="txt_lista" Width="330" Height="70"></TextBox>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="11" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,15,0">
+            <Label Content="Seleziona il cliente" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Foreground="brown" Height="35" Width="170"></Label>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="11" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0">
+            <Label Content="Seleziona orario" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="brown" Height="35" Width="170"></Label>
+        </StackPanel>
+
+        <StackPanel Grid.Row="12" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,15,0">
+            <ComboBox x:Name="cmb_cliente1" Width="150" Height="30"></ComboBox>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="12" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0">
+            <ComboBox x:Name="cmb_orario2" Width="150" Height="30"></ComboBox>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="13" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,15,0">
+            <Button x:Name="btn_prenotacliente"  Content="Prenotazioni Cliente" Width="190" Height="33" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="13" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0">
+            <Button x:Name="btn_prenotaevento"  Content="Prenotazioni Evento" Width="190" Height="33" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+
+        <StackPanel  Grid.Row="14" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox x:Name="txt_evento" Width="400" Height="40"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="15" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0">
+            <Button x:Name="btn_clean"  Content="Pulisci" Width="120" Height="33" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="15" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0">
+            <Button x:Name="btn_esci"  Content="Esci" Width="120" Height="33" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>
