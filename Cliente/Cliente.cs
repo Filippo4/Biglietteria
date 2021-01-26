@@ -35,7 +35,8 @@ namespace ClasseCliente
             {
                 try
                 {
-                    int cellulare = int.Parse(n);
+                    Int64.Parse(n);
+                    numero = n;
                 }
                 catch(Exception)
                 {

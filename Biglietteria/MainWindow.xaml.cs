@@ -57,7 +57,7 @@ namespace Biglietteria
                 cli.SetNumero(txt_cellulare.Text);
 
                 cmb_cliente.Items.Add(cli.Stampa());
-                cmb_cliente.Items.Add(cli.Stampa());
+                cmb_cliente1.Items.Add(cli.Stampa());
 
                 txt_cellulare.Clear();
                 txt_cognome.Clear();
