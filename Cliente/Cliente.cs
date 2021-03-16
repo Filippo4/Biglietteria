@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ClasseCliente
 {
@@ -8,6 +9,9 @@ namespace ClasseCliente
         public string cognome { get; set;}
         private string sesso;
         private string numero;
+
+
+        public List<Prenotazione> p = new List<Prenotazione>();
         public Cliente(string n ,string c)
         {
             nome = n;
@@ -29,6 +33,7 @@ namespace ClasseCliente
         {
             return numero;
         }
+
         public void SetNumero(string n)
         {
             if (n.Length == 10)
@@ -49,6 +54,49 @@ namespace ClasseCliente
         public string Stampa()
         {
             return $"{nome} {cognome}";
+        }
+
+        public void AddPrenotazione(Prenotazione prenotazione)
+        {
+            p.Add(prenotazione);
+        }
+        public void RimuoviPrenotazione(Prenotazione prenotazione)
+        {
+            p.Remove(prenotazione);
+        }
+
+        public int ContaPrenotazioni()
+        {
+            int c = 0;
+            for (int i = 0; i < p.Count; i++)
+            {
+                c++;
+            }
+            return c;
+        }
+
+        public double CalcolaCosto()
+        {
+            double c = 0;
+            for (int i = 0; i < p.Count; i++)
+            {
+                c = c + p[i].Prezzo();
+            }
+            return c;
+        }
+
+        public int ContaPrenotazioniEvento(string ora)
+        {
+            int c = 0;
+
+            for (int i = 0; i < p.Count; i++)
+            {
+                if (p[i].orario == ora)
+                {
+                    c++;
+                }
+            }
+            return c++;
         }
     }
 }
